@@ -266,7 +266,7 @@ function find_fast_mirror() {
     ubuntu|pop)
     arch=$(dpkg --print-architecture)
       if [[ "$arch" == "amd64" ]]; then
-      echo 'Which mirror list on http://mirrors.ubuntu.com/ would you prefer to use instead of mirrors.txt?'
+      echo 'Which mirror list from http://mirrors.ubuntu.com/ would you like to use as an alternative to the default "mirrors.txt"?'
       read mirror_list_file
       mirror_list_file=${mirror_list_file:-mirrors.txt}
       local mirrors=$(curl --max-time 5 -sSfL http://mirrors.ubuntu.com/$mirror_list_file)
